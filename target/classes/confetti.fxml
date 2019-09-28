@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="container" focusTraversable="true" prefHeight="777.0" prefWidth="1266.0" snapToPixel="false" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="solution.Controller">
+    <children>
+        <JFXButton layoutY="723.0" prefHeight="54.0" prefWidth="203.0" style="-fx-background-color: #05071F;" text="Created  by  Hiep  &amp;  Yen" textFill="#e0c510">
+            <font>
+                <Font name="Poor Richard" size="18.0" />
+            </font>
+            <ripplerFill>
+                <LinearGradient endX="1.0" endY="1.0">
+                    <stops>
+                        <Stop color="#c65f5f" />
+                        <Stop color="WHITE" offset="1.0" />
+                    </stops>
+                </LinearGradient>
+            </ripplerFill>
+        </JFXButton>
+        <AnchorPane prefHeight="723.0" prefWidth="178.0" style="-fx-background-color: #05071F;">
+            <children>
+                <VBox prefHeight="675.0" prefWidth="203.0" style="-fx-background-color: transparent;">
+                    <children>
+                        <HBox alignment="CENTER" prefHeight="126.0" prefWidth="120.0">
+                            <children>
+                                <ImageView fitHeight="86.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@image/hiep.png" />
+                                    </image>
+                                </ImageView>
+                            </children>
+                            <padding>
+                                <Insets bottom="10.0" top="100.0" />
+                            </padding>
+                        </HBox>
+                        <Label alignment="CENTER" prefHeight="44.0" prefWidth="203.0" text="AUTO-CONFETTI" textFill="#e15ecb">
+                            <font>
+                                <Font name="Felix Titling" size="20.0" />
+                            </font></Label>
+                        <JFXButton fx:id="btn_setup" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="84.0" prefWidth="203.0" ripplerFill="#d6c4c4" stylesheets="@style.css" text="SET UP" textFill="#d7c5c5">
+                            <graphic>
+                                <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@image/module.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <padding>
+                                <Insets left="50.0" />
+                            </padding>
+                        </JFXButton>
+                        <JFXButton fx:id="btn_result" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="84.0" prefWidth="203.0" ripplerFill="#d6c4c4" stylesheets="@style.css" text="RESULT" textFill="#d7c5c5">
+                            <graphic>
+                                <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@image/chart.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <padding>
+                                <Insets left="50.0" />
+                            </padding>
+                        </JFXButton>
+                        <JFXButton fx:id="btn_sleep" alignment="BASELINE_LEFT" graphicTextGap="22.0" onAction="#handleButtonAction" prefHeight="84.0" prefWidth="203.0" ripplerFill="#d6c4c4" stylesheets="@style.css" text="SLEEP" textFill="#dacbcb">
+                            <graphic>
+                                <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@image/hide.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <padding>
+                                <Insets left="50.0" />
+                            </padding>
+                        </JFXButton>
+                        <JFXButton fx:id="btn_exit" alignment="BASELINE_LEFT" graphicTextGap="22.0" onAction="#handleButtonAction" prefHeight="84.0" prefWidth="203.0" ripplerFill="#d6c4c4" stylesheets="@style.css" text="EXIT" textFill="#b2a5a5">
+                            <graphic>
+                                <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@image/exit.png" />
+                                    </image></ImageView>
+                            </graphic>
+                            <padding>
+                                <Insets left="50.0" />
+                            </padding>
+                        </JFXButton>
+                    </children>
+                </VBox>
+            </children>
+        </AnchorPane>
+        <ImageView fx:id="open1" fitHeight="30.0" fitWidth="30.0" layoutX="205.0" layoutY="255.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@image/right.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="open2" fitHeight="30.0" fitWidth="30.0" layoutX="205.0" layoutY="330.0" pickOnBounds="true" preserveRatio="true" visible="false">
+            <image>
+                <Image url="@image/right.png" />
+            </image>
+        </ImageView>
+      <AnchorPane fx:id="setupPane" layoutX="229.0" prefHeight="777.0" prefWidth="1037.0" style="-fx-border-color: red;">
+         <children>
+            <JFXButton fx:id="btn_start" layoutX="371.0" layoutY="657.0" prefHeight="86.0" prefWidth="191.0" style="-fx-background-color: #1bda4a;" text="START" />
+            <AnchorPane layoutX="14.0" layoutY="44.0" prefHeight="125.0" prefWidth="373.0" style="-fx-border-color: #000;">
+               <children>
+                  <ImageView fx:id="img_ques" fitHeight="127.0" fitWidth="376.0" layoutX="1.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true" />
+                  <JFXButton fx:id="quesSetup" layoutX="296.0" layoutY="2.0" prefHeight="25.0" prefWidth="78.0" style="-fx-background-color: #3f69b1;" text="THIẾT LẬP" textFill="WHITE" />
+                  <Label layoutX="14.0" layoutY="2.0" prefHeight="25.0" prefWidth="78.0" text="Vị trí câu hỏi:" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="14.0" layoutY="254.0" prefHeight="66.0" prefWidth="376.0" style="-fx-border-color: #000;">
+               <children>
+                  <ImageView fx:id="img_ansA" fitHeight="54.0" fitWidth="376.0" layoutX="1.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true" />
+                  <JFXButton fx:id="ans1Setup" layoutX="296.0" layoutY="2.0" prefHeight="25.0" prefWidth="78.0" style="-fx-background-color: #3f69b1;" text="THIẾT LẬP" textFill="WHITE" />
+                  <Label layoutX="14.0" layoutY="2.0" prefHeight="25.0" prefWidth="78.0" text="Vị trí câu A:" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="14.0" layoutY="387.0" prefHeight="66.0" prefWidth="376.0" style="-fx-border-color: #000;">
+               <children>
+                  <ImageView fx:id="img_ansB" fitHeight="54.0" fitWidth="376.0" layoutX="1.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true" />
+                  <JFXButton fx:id="ans2Setup" layoutX="296.0" layoutY="2.0" prefHeight="25.0" prefWidth="78.0" style="-fx-background-color: #3f69b1;" text="THIẾT LẬP" textFill="WHITE" />
+                  <Label layoutX="14.0" layoutY="2.0" prefHeight="25.0" prefWidth="78.0" text="Vị trí câu B:" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="14.0" layoutY="532.0" prefHeight="66.0" prefWidth="376.0" style="-fx-border-color: #000;">
+               <children>
+                  <ImageView fx:id="img_ansC" fitHeight="54.0" fitWidth="376.0" layoutX="1.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true" />
+                  <JFXButton fx:id="ans3Setup" layoutX="296.0" layoutY="2.0" prefHeight="25.0" prefWidth="78.0" style="-fx-background-color: #3f69b1;" text="THIẾT LẬP" textFill="WHITE" />
+                  <Label layoutX="14.0" layoutY="2.0" prefHeight="25.0" prefWidth="78.0" text="Vị trí câu C:" />
+               </children>
+            </AnchorPane>
+            <ImageView fitHeight="626.0" fitWidth="414.0" layoutX="648.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@image/test10.jpg" />
+               </image>
+            </ImageView>
+            <BarChart fx:id="barChart1" layoutX="415.0" layoutY="206.0" prefHeight="244.0" prefWidth="293.0">
+              <xAxis>
+                <CategoryAxis label="Đáp án" side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis label="Số lượng" side="LEFT" />
+              </yAxis>
+            </BarChart>
+            <Label fx:id="lbTime" alignment="CENTER" layoutX="511.0" layoutY="483.0" prefHeight="25.0" prefWidth="148.0" text="Label" />
+            <BarChart fx:id="barChart2" layoutX="730.0" layoutY="206.0" prefHeight="244.0" prefWidth="293.0">
+               <xAxis>
+                  <CategoryAxis label="Đáp án" side="BOTTOM" />
+               </xAxis>
+               <yAxis>
+                  <NumberAxis label="Số lượng" side="LEFT" />
+               </yAxis>
+            </BarChart>
+            <Label fx:id="lbTime1" alignment="CENTER" layoutX="824.0" layoutY="483.0" prefHeight="25.0" prefWidth="148.0" text="Label" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="resultPane" layoutX="229.0" prefHeight="777.0" prefWidth="1037.0" visible="false" />
+    </children>
+</AnchorPane>
